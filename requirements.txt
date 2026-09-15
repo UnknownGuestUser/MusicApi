@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+httpx
+pymongo
+pycryptodome
+pyrogram
+tgcrypto
+yt-dlp
+bgutil-ytdlp-pot-provider
