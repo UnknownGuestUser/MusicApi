@@ -51,7 +51,7 @@ API_KEYS = {
 }
 
 # Master password — protects key management + /rebuild_cache
-API_MASTER = os.environ.get("API_MASTER", "AnnieMusic@2000").strip()
+API_MASTER = os.environ.get("API_MASTER", "MusicApi@2016").strip()
 
 # Runtime keys created via /genkey (survive restarts)
 API_KEYS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "api_keys.json")
