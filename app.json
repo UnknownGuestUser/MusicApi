@@ -1,0 +1,42 @@
+{
+  "name": "music-api",
+  "description": "FastAPI Music API with YouTube, JioSaavn and Telegram cache",
+  "env": {
+    "BASE_DIR": {
+      "description": "Optional base directory. Leave empty on Heroku to use /app; VPS can use /home/ubuntu.",
+      "required": false
+    },
+    "YTDLP_BIN": {
+      "description": "Optional yt-dlp executable path. Leave empty when yt-dlp is in PATH.",
+      "required": false
+    },
+    "DENO_BIN": {
+      "description": "Optional Deno executable path. Leave empty when deno is in PATH.",
+      "required": false
+    },
+    "NODE_BIN": {
+      "description": "Optional Node executable path. Leave empty when node is in PATH.",
+      "required": false
+    },
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Telegram Bot Token",
+      "required": true
+    },
+    "TELEGRAM_CHAT_ID": {
+      "description": "Telegram chat/channel ID used for media cache",
+      "required": true
+    },
+    "TELEGRAM_API_ID": {
+      "description": "Telegram API ID for Pyrogram",
+      "required": true
+    },
+    "TELEGRAM_API_HASH": {
+      "description": "Telegram API Hash for Pyrogram",
+      "required": true
+    },
+    "API_MASTER": {
+      "description": "Master password for API key management",
+      "required": true
+    }
+  }
+}
