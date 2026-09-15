@@ -1,0 +1,49 @@
+{
+  "name": "Music-Api",
+  "description": "FastAPI Music/Media API with YouTube, JioSaavn and Telegram cache",
+  "keywords": [
+    "fastapi",
+    "music",
+    "youtube",
+    "jiosaavn",
+    "telegram",
+    "api"
+  ],
+  "repository": "",
+  "env": {
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Telegram Bot Token",
+      "required": true
+    },
+    "TELEGRAM_CHAT_ID": {
+      "description": "Telegram chat/channel ID used for media cache",
+      "required": true
+    },
+    "TELEGRAM_API_ID": {
+      "description": "Telegram API ID",
+      "required": true
+    },
+    "TELEGRAM_API_HASH": {
+      "description": "Telegram API Hash",
+      "required": true
+    },
+    "API_MASTER": {
+      "description": "Master password for API key management",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-apt"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}
