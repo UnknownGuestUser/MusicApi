@@ -47,7 +47,7 @@ REQUIRE_API_KEY = True
 
 # Built-in keys — always valid
 API_KEYS = {
-    "ANNIE-a9ee0bdff73d3b3f4f8c",
+    "MusicApiKey-a9ee0bdff73d3b3f4f8c",
 }
 
 # Master password — protects key management + /rebuild_cache
