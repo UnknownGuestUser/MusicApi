@@ -87,8 +87,8 @@ def is_valid_key(key: str) -> bool:
 # TELEGRAM CONFIG
 # =========================================================
 
-TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8383316525:AAEfH07RzHha_lOsA7CsZ9KpL9yqdq1q").strip()
-TELEGRAM_CHAT_ID   = os.environ.get("TELEGRAM_CHAT_ID",   "-1004444084").strip()
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8614226404:AAGHtZn0Cge1AGc4LuT6OLIfgYidxbnQJ74").strip()
+TELEGRAM_CHAT_ID   = os.environ.get("TELEGRAM_CHAT_ID",   "-1003766108062").strip()
 TELEGRAM_API_ID    = int(os.environ.get("TELEGRAM_API_ID", "309262") or "309212")
 TELEGRAM_API_HASH  = os.environ.get("TELEGRAM_API_HASH",  "32b313c2830ed817fc8cd502d8975").strip()
 
