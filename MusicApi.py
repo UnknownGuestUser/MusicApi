@@ -251,7 +251,7 @@ def _check_master(master: str):
 
 # =========================================================
 # TELEGRAM CACHE  (telegram_cache.json)
-# Every upload also writes caption "ANNIE:ID:TYPE" so /rebuild_cache works.
+# Every upload also writes caption "MusicApi:ID:TYPE" so /rebuild_cache works.
 # =========================================================
 
 def tg_enabled() -> bool:
@@ -306,7 +306,7 @@ async def get_pyro_client():
             return _PYRO_CLIENT
         try:
             from pyrogram import Client
-            client = Client("annie_user_uploader", api_id=TELEGRAM_API_ID,
+            client = Client("musicapi_user_uploader", api_id=TELEGRAM_API_ID,
                             api_hash=TELEGRAM_API_HASH,
                             workdir=os.path.dirname(os.path.abspath(__file__)))
             await client.start()
