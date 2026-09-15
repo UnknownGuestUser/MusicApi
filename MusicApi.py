@@ -930,12 +930,12 @@ async def serve_jio(query: str, request: Request = None):
 
 @app.get("/")
 async def root():
-    return JSONResponse({"Status": "Music API Running ✅ By RAJOWNERX1"})
+    return JSONResponse({"Status": "Music API Running ✅ By KapilYadav"})
 
 
 @app.get("/status")
 async def status():
-    return JSONResponse({"Status": "Music API Running ✅ By RAJOWNERX1"})
+    return JSONResponse({"Status": "Music API Running ✅ By KapiLYadav"})
 
 
 @app.get("/download")
