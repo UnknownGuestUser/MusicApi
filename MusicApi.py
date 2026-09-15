@@ -1020,7 +1020,7 @@ async def stream(
 @app.get("/genkey")
 async def genkey(master: str = Query(...), name: str = Query("user")):
     _check_master(master)
-    key  = "ANNIE-" + secrets.token_hex(12)
+    key  = "MusicApi-" + secrets.token_hex(12)
     data = load_dynamic_keys()
     data[key] = {"name": name, "created": time.time()}
     save_dynamic_keys(data)
@@ -1064,7 +1064,7 @@ async def rebuild_cache(master: str = Query(...)):
     data = _load_tg_cache()
     async for msg in client.get_chat_history(int(_pyro_chat_id)):
         caption = (getattr(msg, "caption", None) or "").strip()
-        if not caption.startswith("ANNIE:"):
+        if not caption.startswith("MusicApi:"):
             skipped += 1; continue
         parts = caption.split(":")
         if len(parts) != 3:
