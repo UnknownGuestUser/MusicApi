@@ -347,7 +347,7 @@ async def _upload_bot_api(key, media_type, file_path):
     method  = "sendAudio" if media_type == "audio" else "sendVideo"
     field   = "audio"     if media_type == "audio" else "video"
     mime    = "audio/mp4" if media_type == "audio" else "video/mp4"
-    caption = f"ANNIE:{key}:{media_type}"
+    caption = f"MusicApi:{key}:{media_type}"
     async with httpx.AsyncClient(timeout=300) as hx:
         with open(file_path, "rb") as fh:
             r = await hx.post(
@@ -367,7 +367,7 @@ async def _upload_pyrogram(key, media_type, file_path):
     client = await get_pyro_client()
     if not client:
         return None
-    caption = f"ANNIE:{key}:{media_type}"
+    caption = f"MusicApi:{key}:{media_type}"
 
     async def _send(cid):
         if media_type == "audio":
