@@ -25,12 +25,30 @@ CACHE_DIR    = os.path.join(BASE_DIR, "cache")
 COOKIES_FILE = os.environ.get("COOKIES_FILE", os.path.join(BASE_DIR, "cookies.txt"))
 os.makedirs(CACHE_DIR, exist_ok=True)
 
-# External binaries: use VPS virtualenv paths when present, otherwise PATH.
-_DEFAULT_YTDLP = "/home/ubuntu/myenv/bin/yt-dlp" if os.path.isfile("/home/ubuntu/myenv/bin/yt-dlp") else (shutil.which("yt-dlp") or "yt-dlp")
+# External binaries
+_DEFAULT_YTDLP = (
+    "/home/ubuntu/myenv/bin/yt-dlp"
+    if os.path.isfile("/home/ubuntu/myenv/bin/yt-dlp")
+    else (shutil.which("yt-dlp") or "yt-dlp")
+)
+
 YTDLP_BIN = os.environ.get("YTDLP_BIN", _DEFAULT_YTDLP)
-DENO_BIN = os.environ.get("DENO_BIN", shutil.which("deno") or "/root/.deno/bin/deno")
-NODE_BIN = os.environ.get("NODE_BIN", shutil.which("node") or "/usr/bin/node")
-YTDLP_COOKIES = ["--cookies", COOKIES_FILE] if os.path.isfile(COOKIES_FILE) else []
+
+DENO_BIN = os.environ.get(
+    "DENO_BIN",
+    shutil.which("deno") or "/app/.deno/bin/deno"
+)
+
+NODE_BIN = os.environ.get(
+    "NODE_BIN",
+    shutil.which("node") or "/usr/bin/node"
+)
+
+YTDLP_COOKIES = (
+    ["--cookies", COOKIES_FILE]
+    if os.path.isfile(COOKIES_FILE)
+    else []
+)
 
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
