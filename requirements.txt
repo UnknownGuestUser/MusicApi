@@ -7,3 +7,4 @@ pyrogram
 tgcrypto
 yt-dlp
 bgutil-ytdlp-pot-provider
+python-multipart
